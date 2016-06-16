@@ -1,4 +1,4 @@
-# es5-class
+# es5-class-ployfill
 
 Use Class-likely in `es5` Inspired by `http://ejohn.org/blog/simple-javascript-inheritance/`
 
