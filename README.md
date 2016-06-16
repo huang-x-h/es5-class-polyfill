@@ -33,22 +33,54 @@ var Shape = Class.extend({
 
 // Rectangle
 var Rectangle = Shape.extend({
+  constructor: function(w, h) {
+    this.w = w;
+    this.h = h;
+
+    this._super();
+  },
+
   move: function(x, y) {
     this._super(x, y);
     console.info('Rectangle moved.');
   },
 
+  area: function() {
+    console.log('Area is', this.w * this.h);
+  },
+
   echo: function() {
-    console.log('I am Rectange.');
+    console.log('I am Rectangle.');
   }
 });
 
-var rect = new Rectangle();
+// Square
+var Square = Rectangle.extend({
+  constructor: function(w) {
+    this._super(w, w);
+  },
+
+  echo: function() {
+    console.log('I am Square.');
+  }
+});
+
+var rect = new Rectangle(2, 4);
+var square = new Square(4);
 
 console.log('Is rect an instance of Rectangle?', rect instanceof Rectangle);// true
 console.log('Is rect an instance of Shape?', rect instanceof Shape);// true
+console.log('Is rect an instance of Square?', rect instanceof Square);// false
 rect.echo(); // Outputs, 'I am Rectange.'
 rect.move(1, 1); // Outputs, 'Shape moved. Rectangle moved.'
+rect.area(); // Outputs, 'Area is 8'
+
+console.log('Is square an instance of Square?', square instanceof Square);// true
+console.log('Is square an instance of Rectangle?', square instanceof Rectangle);// true
+console.log('Is square an instance of Shape?', square instanceof Shape);// true
+square.echo(); // Outputs, 'I am Square.'
+square.area(); // Outputs, 'Area is 16'
+
 ```
 
 ## API
