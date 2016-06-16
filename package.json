@@ -1,0 +1,30 @@
+{
+  "name": "es5-class-ployfill",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es5",
+    "class",
+    "ployfill"
+  ],
+  "author": "huang.xinghui <huang.x.hui@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huang-x-h/es5-class-polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/huang-x-h/es5-class-polyfill/issues"
+  },
+  "homepage": "https://github.com/huang-x-h/es5-class-polyfill"
+}
